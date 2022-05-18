@@ -1,0 +1,14 @@
+{:deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        org.clojure/tools.deps.alpha {:mvn/version "0.12.985"}
+
+        poly/a {:local/root "../../components/a"}
+        poly/b {:local/root "../../components/b"}
+        poly/c {:local/root "../../components/c"}
+        poly/d {:local/root "../../bases/d"}}
+
+ :aliases {:test {:extra-paths ["test"]
+                  :extra-deps {polylith-kaocha/kaocha-wrapper
+                               {:git/url "https://github.com/imrekoszo/polylith-kaocha"
+                                :git/tag "v0.7.0"
+                                :git/sha "3426480"
+                                :deps/root "projects/kaocha-wrapper"}}}}}

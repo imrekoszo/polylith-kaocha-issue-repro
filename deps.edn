@@ -1,7 +1,14 @@
-{:aliases  {:dev {:extra-paths ["development/src"]
-                  :extra-deps {org.clojure/clojure {:mvn/version " 1.11.0"}}}
+{:aliases  {:dev {:extra-paths ["development/src"
+                                "bases/d/src"
+                                "components/a/src"
+                                "components/b/src"
+                                "components/c/src"]
+                  :extra-deps {org.clojure/clojure {:mvn/version "1.11.1"}}}
 
-            :test {:extra-paths []}
+            :test {:extra-paths ["bases/d/test"
+                                 "components/a/test"
+                                 "components/b/test"
+                                 "components/c/test"]}
 
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polyfy/polylith
@@ -10,7 +17,11 @@
                                  :deps/root "projects/poly"}
 
                                 polylith-kaocha/test-runner
-                                #_{:local/root "../polylith-kaocha/projects/test-runner"}
                                 {:git/url "https://github.com/imrekoszo/polylith-kaocha"
-                                 :git/sha "e1f2f6644cde0ec73fa975174ed41875e3f8ce7d"
-                                 :deps/root "projects/test-runner"}}}}}
+                                 :git/tag "v0.7.0"
+                                 :git/sha "3426480"
+                                 :deps/root "projects/test-runner"}
+                                #_{:local/root "../polylith-kaocha/projects/test-runner"}
+                                #_{:git/url "https://github.com/imrekoszo/polylith-kaocha"
+                                   :git/sha "e1f2f6644cde0ec73fa975174ed41875e3f8ce7d"
+                                   :deps/root "projects/test-runner"}}}}}
