@@ -4,4 +4,4 @@
 
 (deftest dummy-test
   (testing "test SHOULD run"
-    (is (= [:a :b :c] (core/stuff)))))
+    (is (= [:a :b :c 0] (core/stuff)))))

@@ -1,2 +1,2 @@
-#kaocha/v1 {:plugins []
+#kaocha/v1 {:plugins [:kaocha.plugin.alpha/spec-test-check]
             :reporter kaocha.report/documentation}

@@ -4,6 +4,7 @@
         poly/a {:local/root "../../components/a"}
         poly/b {:local/root "../../components/b"}
         poly/c {:local/root "../../components/c"}
+        poly/s {:local/root "../../components/s"}
         poly/d {:local/root "../../bases/d"}}
 
  :aliases {:test {:extra-paths ["test"]
@@ -11,4 +12,8 @@
                                {:git/url "https://github.com/imrekoszo/polylith-kaocha"
                                 ;:git/tag "v0.7.0"
                                 :git/sha "e408aacd69d7bfe288a349cdd795a286b5e51b59"
-                                :deps/root "projects/kaocha-wrapper"}}}}}
+                                :deps/root "projects/kaocha-wrapper"}
+
+                               ;; kaocha's auto spec test checking needs orchestra and test.check provided
+                               orchestra/orchestra {:mvn/version "2021.01.01-1"}
+                               org.clojure/test.check {:mvn/version "1.1.1"}}}}}
