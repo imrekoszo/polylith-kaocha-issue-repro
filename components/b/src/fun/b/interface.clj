@@ -1,5 +1,4 @@
-(ns fun.b.interface
-  (:require [fun.a.interface :as a]))
+(ns fun.b.interface)
 
 (defn b []
   :b)
